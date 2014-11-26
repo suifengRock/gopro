@@ -22,8 +22,6 @@ var (
 		"FROM google/golang",
 		"WORKDIR /gopath",
 		"ADD . /gopath",
-		"RUN apt-get install -y vim",
-		"VOLUME /gopath",
 		"CMD [\"bash\"]",
 	}
 )
@@ -58,6 +56,11 @@ func main() {
 		"	go run main.go",
 		"build:",
 		"	go install main.go",
+		"images:",
+		"	docker build -t " + proName + " .",
+		"run:",
+		"	docker run -it -v " + proPath + ":/gopath --rm " + proName,
+		"docker: images run",
 	}
 	writeFile(mkfile, mkContent, "\n")
 
