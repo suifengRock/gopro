@@ -9,7 +9,7 @@ gopro
     例子：gopro test
 ```
 
-#形成
+#生成目录
 ```
 <PROJECT_NAME>
  |- bin 
