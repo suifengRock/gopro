@@ -1,4 +1,4 @@
-export GOPATH :=/Users/suifengluo/Documents/gospace/gopro/
+export GOPATH := ${PWD}
 export PATH := ${PATH}:${GOPATH}/bin
 export GOBIN := ${GOPATH}/bin
 main:
